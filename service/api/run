@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export RACK_ENV="${RACK_ENV:-"production"}"
+export ALLOW_SIGNUPS="${ALLOW_SIGNUPS:-"1"}" 
+export BUNDLE_PATH=/bitwarden/api/vendor/bundle/ruby/2.4.0/
+
+cd /bitwarden/api
+
+exec bundle exec rackup -p 4567 config.ru

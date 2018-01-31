@@ -1,0 +1,21 @@
+pipeline:
+  build-web:
+    image: node:8-alpine
+    commands:
+      - "sh build-web.sh"
+      - "ls -la"
+  build-api:
+    image: ruby:2.4-alpine3.7
+    commands:
+      - "sh build-api.sh"
+  build-image:
+    image: plugins/docker
+    repo: mprasil/bitwarden-ruby
+    tag: latest
+    storage_driver: vfs
+    secrets: [ docker_username, docker_password ]
+    when:
+      branch: master
+
+
+  
