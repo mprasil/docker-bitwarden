@@ -3,7 +3,7 @@
 export RACK_ENV="${RACK_ENV:-"production"}"
 export BUNDLE_PATH=/bitwarden/api/vendor/bundle/ruby/2.4.0/
 
-if [ "${SIGNUPS:-"no"}" == "yes" ]
+if [ "${SIGNUPS:-"yes"}" == "yes" ]
 then 
     export ALLOW_SIGNUPS="${ALLOW_SIGNUPS:-"1"}" 
 fi
