@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-VERSION="1.24.0"
+VERSION="1.26.0"
 URL="https://github.com/bitwarden/web/archive/v${VERSION}.tar.gz"
 
 echo "---- Installing Gulp ----"
