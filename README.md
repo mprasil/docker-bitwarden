@@ -7,7 +7,7 @@ The build is using upstream code for the [Vault](https://github.com/bitwarden/we
 You can run your own instance by running:
 
 ```
-docker run -d -v /bitwarden_data/:/bitwarden/api/db/ -p 8080:8080 mprasil/bitwarden-ruby
+docker run -d -v /bitwarden_data/db/:/bitwarden/api/db/ -v /bitwarden_data/attachments/:/bitwarden/api/data/attachments/ -p 8080:8080 mprasil/bitwarden-ruby
 ```
 
 The important part is the volume mapping. The above example will preserve your passwords DB in `/bitwarden_data` directory on the host machine - adapt this path to your preference. 
